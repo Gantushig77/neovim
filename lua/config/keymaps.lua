@@ -24,5 +24,6 @@ keymap.set("i", "<C-k>", "<Up>")
 keymap.set("i", "<C-l>", "<Right>")
 
 keymap.set("i", "<C-space>", "coc#refresh()")
+keymap.set("i", "<Command-Left>", "<0>")
 
 -- inoremap <silent><expr> <c-space> coc#refresh()

@@ -1,13 +1,16 @@
 return {
-  {
-    "akinsho/flutter-tools.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",
-    },
-    config = function()
-      require("flutter-tools").setup({})
+  "akinsho/flutter-tools.nvim",
+  lazy = false,
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "stevearc/dressing.nvim",
+  },
+  config = true,
+  debugger = {
+    enabled = true,
+    register_configurations = function(_)
+      require("dap").configurations.dart = {}
+      -- require("dap.ext.vscode").load_launchjs()
     end,
   },
 }

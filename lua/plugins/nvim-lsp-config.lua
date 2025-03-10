@@ -1,5 +1,9 @@
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
-  opts = {},
+  opts = function()
+    require("lspconfig").dartls.setup({
+      cmd = { "dart", "language-server", "--protocol=lsp" },
+    })
+  end,
 }

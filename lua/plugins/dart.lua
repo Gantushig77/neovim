@@ -1,7 +1,7 @@
 return {
   -- Language support, mainly for indentation because it's more stable than treesitter in Dart
   "dart-lang/dart-vim-plugin",
-
+  disabled = true,
   {
     "nvim-treesitter/nvim-treesitter-context",
     config = function()
